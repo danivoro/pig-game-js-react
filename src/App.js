@@ -30,14 +30,10 @@ function App() {
     }else{
       setPlayer2Score((prevScore) => prevScore + turnTotal);
     }
-    changePlayerTurn()
+    changePlayerTurn();
     setTurnTotal(0);
     setLastRoll(0);
-    if(isGameOver()){
-      setPlayer1Score(0)
-      setPlayer2Score(0)
-      setTurn(1)
-    }
+    resetGame();
   }
 
   function changePlayerTurn(){
@@ -58,6 +54,23 @@ function App() {
     return (player1Score >= winThreshold || player2Score >= winThreshold)
   }
 
+  function resetGame(){
+    if (isGameOver()){
+      setPlayer1Score(0)
+      setPlayer2Score(0)
+      setTurn(1)
+    }  
+  }
+
+  function stickOrReset(){
+    if(isGameOver()){
+      return <span>RESET</span>
+    }else{
+      return <span>STICK</span>
+    } 
+  }
+
+
 
   return (
     <div className="App">
@@ -77,7 +90,7 @@ function App() {
           Last Roll: {lastRoll ? lastRoll : '-'}
         </div>
         <div className='turnTotal'>Turn total: {turnTotal}</div>
-        <button onClick={handleStickClicked}>Stick!</button>
+        <button onClick={handleStickClicked}>{stickOrReset()}</button>
       </div>
     </div>
   );
