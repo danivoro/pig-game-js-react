@@ -50,6 +50,12 @@ function App() {
     return classes.join(' ')
   }
 
+  function classesForRestButton(){
+    const classes = ['stickButton']
+    if(isGameOver()) classes.push('gameOver')
+    return classes.join(' ')
+  }
+
   function isGameOver(){
     return (player1Score >= winThreshold || player2Score >= winThreshold)
   }
@@ -90,7 +96,9 @@ function App() {
           Last Roll: {lastRoll ? lastRoll : '-'}
         </div>
         <div className='turnTotal'>Turn total: {turnTotal}</div>
-        <button onClick={handleStickClicked}>{stickOrReset()}</button>
+        <button className={classesForRestButton()} onClick={handleStickClicked}>
+          {stickOrReset()}
+        </button>
       </div>
     </div>
   );

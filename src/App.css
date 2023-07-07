@@ -3,12 +3,13 @@
   font-family: Arial, sans-serif;
   font-size: 40px;
   background-color:antiquewhite;
+  margin-bottom: 100px;
 }
 
 h1 {
   font-size: 45px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .Scores {
@@ -33,6 +34,11 @@ h1 {
 
 .buttomHalf {
   margin-top: 40px;
+}
+
+.stickButton.gameOver {
+  background-color:red;
+  color:black
 }
 
 button {
