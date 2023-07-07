@@ -32,6 +32,12 @@ function App() {
     }
     changePlayerTurn()
     setTurnTotal(0);
+    setLastRoll(0);
+    if(isGameOver()){
+      setPlayer1Score(0)
+      setPlayer2Score(0)
+      setTurn(1)
+    }
   }
 
   function changePlayerTurn(){
