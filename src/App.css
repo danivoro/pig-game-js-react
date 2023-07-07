@@ -1,38 +1,53 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  background-color:antiquewhite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 45px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Scores {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.playerScore {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.playerScore.active {
+  font-weight: bold;
+  color: #544caf;
+}
+
+.gameOver{
+  color:red;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttomHalf {
+  margin-top: 40px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #544caf;
   color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 25px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lastRoll,
+.turnTotal {
+  font-size: 25px;
+  margin-top: 10px;
 }
